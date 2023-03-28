@@ -1,12 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* 구글폰트 불러오기 */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Stylish&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+
+        /* 메인페이지 */
+        .container {
+            background-color: crimson;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .navContainer {
+            position: fixed;
+            display: flex;
+            top: 0;
+            left: 0;
+            height: 70px;
+            width: 100%;
+            opacity: 0.85;
+        }
+
+        .nav1 {
+            width: 95%;
+            background-color: white;
+        }
+
+        .nav2 {
+            width: 5%;
+            background-color: red;
+        }
+
+        /* 인포메이션 컨테이너 */
+        .informationContainer {
+            width: 100%;
+            height: 1200px;
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+        }
+
+        .informationTop {
+            width: 100%;
+            height: 230px;
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+        }
+
+        .informationMain {
+            width: 90%;
+            height: 600px;
+            overflow: scroll;
+        }
+
+        .informationInner {
+            width: 93%;
+            height: 1000px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+            flex-direction: column;
+            padding-bottom: 100px;
+        }
+
+        .bg-img1 {
+            background-image: url('informationcontainerBg.jpg');
+        }
+
+        article {
+            width: 75%;
+            height: auto;
+            border-top: 7px double black;
+            display: flex;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
+
+        dl {
+            width: 20%;
+        }
+
+        dt {
+            color: red;
+            font-size: 1.1em;
+        }
+
+        dd {
+            width: 80%;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="navContainer">
+            <div class="nav1"></div>
+            <div class="nav2"></div>
+        </div>
+    </div>
+
+    <div class="informationContainer bg-img1">
+
+        <div class="informationInner">
+            <div class="informationTop">
+                <p>텍스트or이미지</p>
+            </div>
+            <div class="informationMain">
+
+                <!-- article, dl, dt, dd -->
+                <article>
+                    <dl>
+                        <dt>2023-03-28</dt>
+                    </dl>
+                    <dd>
+                        <h3>제목</h3>
+                        <p>내용</p>
+                    </dd>
+
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-03-28</dt>
+                    </dl>
+                    <dd>
+                        <h3>제목</h3>
+                        <p>내용</p>
+                    </dd>
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-03-28</dt>
+                    </dl>
+                    <dd>
+                        <h3>제목</h3>
+                        <p>내용</p>
+                    </dd>
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-03-28</dt>
+                    </dl>
+                    <dd>
+                        <h3>제목</h3>
+                        <p>내용</p>
+                    </dd>
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-03-28</dt>
+                    </dl>
+                    <dd>
+                        <h3>제목</h3>
+                        <p>내용</p>
+                    </dd>
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-03-28</dt>
+                    </dl>
+                    <dd>
+                        <h3>제목</h3>
+                        <p>내용</p>
+                    </dd>
+                </article>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
