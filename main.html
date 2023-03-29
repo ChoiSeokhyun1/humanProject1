@@ -33,6 +33,13 @@
             height: 80px;
             width: 100%;
             z-index: 1;
+            transition: height 1.5s ease;
+        }
+
+        .navContainer-1 {
+        height: 100px;
+        transition: height 1.5s ease;
+        opacity: 0.9;
         }
 
         /* 메인페이지 네비게이션 좌 */
@@ -40,8 +47,17 @@
             width: 95%;
             background-color: black;
             z-index: 2;
+            transition:background-color 1.5s ease;
         }
 
+        .nav1-1 {
+            width: 95%;
+            background-color: white;
+            z-index: 3;
+            transition:background-color 1.5s ease;
+        }
+
+        
         ul {
             display: flex;
             justify-content: center;
@@ -51,13 +67,19 @@
         }
 
         li {
-            padding-left: 65px;
-            font-size: 1.4em;
+            padding-left: 65px; 
         }
 
         a {
             text-decoration: none;
             color: white;
+            font-size: 1em;
+        }
+
+        .a2 {
+            text-decoration: none;
+            color: black; 
+            font-size:1.3em;
         }
 
         /* 메인페이지 네비게이션 우 */
@@ -76,8 +98,9 @@
         }
 
         /* a태그 마우스 올렸을 시 색상 변경 */
-        a:hover {
-            color: red;
+        /* 풀리는데 이유를 모름. 스타일 충돌 상관없이 강제로 하는 명령어!important */
+        .nav1 a:hover {
+            color: red !important;
         }
 
         /* 배경 비디오 해상도에 맞게 크기 변경 */
@@ -176,19 +199,84 @@
         .left {
             width: 30%;
             height: 100%;
-            background-color: red;
+            /* background: rgba(255, 255, 255, 0.01); */
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+            color: white;
+            flex-direction: column;
         }
 
         .center {
             width: 40%;
             height: 100%;
-            background-color: blue;
+            /* background-color: blue; */
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+            color: white;
+            flex-direction: column;
         }
 
         .right {
             width: 30%;
             height: 100%;
-            background-color: green;
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+            color: white;
+            flex-direction: column;
+        }
+
+        .disk1 {
+            margin-top: 300px;
+            width: 50%;
+            height: 20%;
+            background-image: url('/humanProject/disk1.jpg');
+            background-size: cover;
+            filter: brightness(90%);
+            border-radius: 10px;
+            box-shadow: rgb(20, 19, 19) 0px 35px 30px -30px;
+        }
+
+        #disk2 {
+            width: 50%;
+            height: 20%;
+            background-image: url('/humanProject/disk2.jpg');
+            background-size: cover;
+            filter: brightness(90%);
+            border-radius: 10px;
+            box-shadow: rgb(22, 22, 22) 0px 35px 30px -30px;
+        }
+
+        .button1 {}
+
+        .button2 {}
+
+        .myButton {
+            margin-top: 15px;
+            width: 50%;
+            height: 4%;
+            margin-bottom: 30px;
+            background: black;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .myButton:hover {
+            /* background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%); */
+            background: rgb(255, 255, 255, 0.5);
+            color: black;
         }
     </style>
 </head>
@@ -210,11 +298,22 @@
             </div>
         </div>
         <div class="containerMain">
-            <div class="left"></div>
-            <div class="center"></div>
-            <div class="right"></div>
+            <!--  -->
+            <div class="left">
+                <div class="disk1"></div>
+                <div class="button1 myButton"><br>끼얏호우</div>
+                <div id="disk2"></div>
+                <div class="button2 myButton"><br>끼얏호우</div>
+            </div>
+            <div class="center">
+                <span>
+                    <h1>하하하하</h1>
+                </span>
+            </div>
+            <div class="right">
+                <span>dd</span>
+            </div>
         </div>
-
         <video muted autoplay loop id="bgvid">
             <source src="mainvideo.mp4" type="video/mp4">
     </div>
@@ -304,36 +403,46 @@
                 let navHeight = $(".navContainer")
 
                 if (scrollPosition > targetPosition - 100) {
-                    navChange.css({
-                        "background-color": "white",
-                        "transition": "background-color 1s ease",
-                    });
-                    navText.css({
-                        "color": "black",
-                        "font-size": "1.3em"
-                    });
-                    navHeight.css({
-                        "height": "110px",
-                        "transition": "height 1s ease",
-                        "opacity":"0.9"
-                    });
+                    navChange.addClass('nav1-1');
+                    navText.addClass('a2');
+                    navHeight.addClass('navContainer-1');
                 } else {
-                    navChange.css({
-                        "background-color": "black",
-                        "transition": "background-color 1s ease"
-                    });
-                    navText.css({
-                        "color": "white",
-                        "font-size": "1em"
-                    });
-                    navHeight.css({
-                        "height": "80px",
-                        "transition": "height 1s ease",
-                        "opacity":"1"
-                    });
+                    navChange.removeClass('nav1-1');
+                    navText.removeClass('a2');
+                    navHeight.removeClass('navContainer-1');
                 }
             });
         });
+
+            //         navChange.css({
+            //             "background-color": "white",
+            //             "transition": "background-color 1s ease",
+            //         });
+            //         navText.css({
+            //             "color": "black",
+            //             "font-size": "1.1em"
+            //         });
+            //         navHeight.css({
+            //             "height": "110px",
+            //             "transition": "height 1s ease",
+            //             "opacity": "0.9"
+            //         });
+            //     } else {
+            //         navChange.css({
+            //             "background-color": "black",
+            //             "transition": "background-color 1s ease"
+            //         });
+            //         navText.css({
+            //             "color": "white",
+            //             "font-size": "1em"
+            //         });
+            //         navHeight.css({
+            //             "height": "80px",
+            //             "transition": "height 1s ease",
+            //             "opacity": "1"
+            //         });
+
+
     </script>
 </body>
 
