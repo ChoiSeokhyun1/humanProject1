@@ -10,6 +10,7 @@
         /* 구글폰트 불러오기 */
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Stylish&display=swap');
 
+        /* 페이지 전체 고정값*/
         * {
             margin: 0;
             padding: 0;
@@ -17,28 +18,47 @@
             font-family: 'Nanum Gothic Coding', monospace;
         }
 
-        /* 메인페이지 */
+        /* 메인페이지 상단 */
         .container {
             width: 100%;
             height: 100vh;
         }
 
+        /* 메인페이지 네비게이션 */
         .navContainer {
             position: fixed;
             display: flex;
             top: 0;
             left: 0;
-            height: 60px;
+            height: 80px;
             width: 100%;
             z-index: 1;
         }
 
+        /* 메인페이지 네비게이션 좌 */
         .nav1 {
             width: 95%;
             background-color: black;
             z-index: 2;
         }
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            list-style: none;
+        }
 
+        li {
+            padding-left: 35px;
+            font-size: 1.25em;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* 메인페이지 네비게이션 우 */
         .nav2 {
             width: 5%;
             background-color: brown;
@@ -53,26 +73,53 @@
             cursor: pointer;
         }
 
+        /* a태그 마우스 올렸을 시 색상 변경 */
         a:hover {
             color: red;
         }
 
-        video {
-            width: 100%;
-            z-index: 0;
+        /* 배경 비디오 해상도에 맞게 크기 변경 */
+        video#bgvid {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
         }
 
-        /* 인포메이션 컨테이너 */
+        /* 인포메이션 컨테이너 (bg삽입) */
         .informationContainer {
             width: 100%;
-            height: 1200px;
+            height: 1100px;
             display: flex;
             justify-content: center;
             /*좌우정렬*/
             align-items: center;
             /*상하정렬*/
+            padding-top:70px;
+        }
+        .bg-img1 {
+            background-image: url('informationcontainerBg.jpg');
         }
 
+        /* 인포메이션 이너 (흰 배경) */
+        .informationInner {
+            width: 93%;
+            height: 900px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            /*상하정렬*/
+            flex-direction: column;
+            margin-bottom:100px;
+        }
+
+        /* 인포메이션 top */
         .informationTop {
             width: 100%;
             height: 230px;
@@ -83,29 +130,14 @@
             /*상하정렬*/
         }
 
+        /* 인포메이션 main */
         .informationMain {
             width: 90%;
             height: 600px;
             overflow: scroll;
         }
 
-        .informationInner {
-            width: 93%;
-            height: 1000px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            /*좌우정렬*/
-            align-items: center;
-            /*상하정렬*/
-            flex-direction: column;
-            padding-bottom: 100px;
-        }
-
-        .bg-img1 {
-            background-image: url('informationcontainerBg.jpg');
-        }
-
+        /* 인포메이션 main에 들어가는 박스 */
         article {
             width: 75%;
             height: auto;
@@ -115,41 +147,38 @@
             padding-top: 20px;
             padding-bottom: 50px;
         }
-
         dl {
             width: 20%;
         }
-
         dt {
             color: red;
             font-size: 1.1em;
         }
-
         dd {
             width: 80%;
         }
-
         h3 {
             margin-bottom: 30px;
         }
 
-        ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            list-style: none;
+        .containerMain{
+            display:flex;
+            height:100vh;
         }
-
-        li {
-            padding-left: 35px;
-            font-size: 1.1em;
-
+        .left{
+            width:30%;
+            height:100%;
+            background-color: red;
         }
-
-        a {
-            text-decoration: none;
-            color: white;
+        .center{
+            width:40%;
+            height:100%;
+            background-color: blue;
+        }
+        .right{
+            width:30%;
+            height:100%;
+            background-color: green;
         }
     </style>
 </head>
@@ -167,11 +196,17 @@
             </div>
             <div class="nav2">
                 <p><img src="sns.jpg"></p>
-                <p>SNS</p>
+                <p style="font-size: 1.2em;">SNS</p>
             </div>
         </div>
-        <video muted autoplay loop>
-            <source src="../day01/mainvideo.mp4" type="video/mp4">
+        <div class="containerMain">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+
+        <video muted autoplay loop id="bgvid">
+            <source src="mainvideo.mp4" type="video/mp4">
     </div>
 
     <div class="informationContainer bg-img1">
