@@ -16,7 +16,7 @@
             padding: 0;
             box-sizing: border-box;
             /* font-family: 'Nanum Gothic Coding', monospace; */
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
         /* 메인페이지 상단 */
@@ -24,6 +24,7 @@
             width: 100%;
             height: 100vh;
         }
+
 
         /* 메인페이지 네비게이션 */
         .navContainer {
@@ -35,27 +36,27 @@
             width: 100%;
             z-index: 1;
             transition: height 0.8s ease;
+            /* border-bottom: 1px solid rgb(255, 255, 255); */
         }
 
         .navContainer-1 {
-        height: 70px;
-        transition: height 0.8s ease;
-        opacity: 0.9;
+            height: 70px;
+            transition: height 1.5s ease;
         }
 
         /* 메인페이지 네비게이션 좌 */
         .nav1 {
             width: 95%;
-            background-color: rgba(5, 3, 15, 0.8);
+            background-color: rgba(5, 3, 15, 1);
             z-index: 2;
-             transition:background-color 0.8s ease; 
+            transition: background-color 0.8s ease;
         }
 
         .nav1-1 {
             width: 95%;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.95);
             z-index: 3;
-            transition:background-color 0.8s ease;
+            transition: background-color 1.5s ease;
         }
 
         ul {
@@ -67,23 +68,23 @@
         }
 
         li {
-            padding-left: 65px; 
+            padding-left: 65px;
         }
 
         a {
             text-decoration: none;
-            color:whitesmoke;
+            color: whitesmoke;
         }
 
         .a2 {
             text-decoration: none;
-            color: black; 
+            color: black;
         }
 
         /* 메인페이지 네비게이션 우 */
         .nav2 {
             width: 5%;
-            background-color: rgba(5, 3, 15, 0.95);
+            background-color: rgba(5, 3, 15, 1);
             z-index: 2;
             display: flex;
             justify-content: center;
@@ -93,7 +94,7 @@
             flex-direction: column;
             color: white;
             cursor: pointer;
-            
+
         }
 
 
@@ -113,12 +114,13 @@
             width: auto;
             height: auto;
             z-index: -100;
+            filter: brightness(2);
         }
 
         /* 인포메이션 컨테이너 (bg삽입) */
         .informationContainer {
             width: 100%;
-            height: 100vh;
+            height: 110vh;
             display: flex;
             justify-content: center;
             /*좌우정렬*/
@@ -128,27 +130,30 @@
         }
 
         .bg-img1 {
-            background-image: url('informationcontainerBg.jpg');
+            /* background-image: url('informationcontainerBg.jpg'); */
+            background-image: url('piano.jpg');
+            background-size: cover;
         }
 
         /* 인포메이션 이너 (흰 배경) */
         .informationInner {
-            width: 95%;
-            height: 90vh;
-            background-color: white;
+            width: 90%;
+            height: 85%;
+            background-color: rgba(255, 255, 255, 1);
             display: flex;
             justify-content: center;
             /*좌우정렬*/
             align-items: center;
             /*상하정렬*/
             flex-direction: column;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
+            border-radius: 50px;
         }
 
         /* 인포메이션 top */
         .informationTop {
             width: 100%;
-            height: 230px;
+            height: 180px;
             display: flex;
             justify-content: center;
             /*좌우정렬*/
@@ -156,12 +161,27 @@
             /*상하정렬*/
         }
 
+        /* .infor1{
+            width:20%;
+            height:30%;
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:black;
+            font-size: 1.3em;
+            border-bottom: 5px solid green;
+            border-right: 2px solid green;
+            border-radius: 10px;
+            color:black;
+        } */
+
         /* 인포메이션 main */
         .informationMain {
             width: 70%;
             height: 400px;
             overflow: scroll;
-            margin-bottom:50px;
+            margin-bottom: 50px;
         }
 
         /* 인포메이션 main에 들어가는 박스 */
@@ -177,6 +197,11 @@
 
         dl {
             width: 20%;
+            display:flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            flex-direction: column;
         }
 
         dt {
@@ -193,7 +218,16 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 4em;
+            font-family:'Times New Roman', Times, serif;
+            color:white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            margin-top:20px;
+            border-bottom:2px solid white;
+        }
+
+        h2 {
+            text-shadow: 20px 0 darkblue, 0 1px red, 1px 0 yellow, 0 -1px black;  
         }
 
         .containerMain {
@@ -212,7 +246,7 @@
             /*상하정렬*/
             color: white;
             flex-direction: column;
-            filter:blur(0.5px);
+            filter: blur(0.5px);
         }
 
         .center {
@@ -226,42 +260,42 @@
             /*상하정렬*/
             color: white;
             flex-direction: column;
-            filter:blur(0.5px);
-            
         }
 
         .right {
             width: 10%;
             height: 100%;
             /* background-color: red; */
-            display: flex;
+            display:flex;
             justify-content: center;
-            /*좌우정렬*/
-            align-items: center;
-            /*상하정렬*/
             color: white;
-            flex-direction: column;
-            
+
+
         }
 
         .disk1 {
-            width: 90%;
-            height: 40%;
+            width: 60%;
+            height: 30%;
             background-image: url('disk1.jpg');
-            background-size:cover;
+            background-size: cover;
             filter: brightness(100%);
             border-radius: 10px;
-            box-shadow: rgb(22, 22, 22) 0px 35px 30px -30px;
+            border:10px solid black;
+            border-top: none;
+            border-left: none;
+            
         }
 
         #disk2 {
-            width: 90%;
-            height: 40%;
+            width: 60%;
+            height: 30%;
             background-image: url('disk2.jpg');
-            background-size:cover;
+            background-size: cover;
             filter: brightness(100%);
             border-radius: 10px;
-            box-shadow: rgb(22, 22, 22) 0px 35px 30px -30px;
+            border:10px solid black;
+            border-top: none;
+            border-left: none;
         }
 
         .button1 {
@@ -269,6 +303,7 @@
             justify-content: center;
             /*좌우정렬*/
             align-items: center;
+            box-shadow: rgba(238, 233, 233, 0.35) 0px 3px 8px;
         }
 
         .button2 {
@@ -280,14 +315,16 @@
 
         .myButton {
             width: 70%;
-            height: 7%;
-            background: rgba(0, 0, 0, 0.8);
-            border:2px solid black;
+            height: 9%;
+            background: rgba(0, 0, 0, 1);
+            border: 2px solid black;
             border-radius: 30px;
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
             text-align: center;
+            margin-top: 20px;
+
         }
 
         .myButton:hover {
@@ -296,30 +333,105 @@
             color: black;
         }
 
-        .ban{
-            margin-right:25px;
-            height:100%;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            /*좌우정렬*/
-            align-items: center;
-        }
-        .ban2{
-            margin-left:25px;
-            height:100%;
-            display:flex;
+        .ban {
+
+            height: 90%;
+            width: 20%;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             /*좌우정렬*/
             align-items: center;
         }
 
-        .bang{
-            width:100%;
-            height:100%;
-            display:flex;
-            justify-content:center;
+        .ban2 {
+            height: 90%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+        }
+
+        .bang {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;         
+        }
+
+        .pageDown {
+            height: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .pageDownbox {
+            height: 45%;
+            width: 4.3%;
+            /* background-color: red; */
+            background-image: url('downBlack.png');
+            background-size: cover;
+        }
+
+        .pageDownbox:hover {
+            transform: scale(1.3);
+            transition: transform .5s;
+            border-radius: 40px;
+            border:1px solid black;
+        }
+
+        .pagedown222 {
+            height: 50px;
+            width: 50px;
+            background-image: url('upBlack.png');
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 23px;
+            border: 2px solid black;
+            margin-right: 20px;
+        }
+
+        .pagedown222:hover {
+            transform: scale(1.3);
+            transition: transform .5s;
+            border: 8px solid rgb(255, 255, 255);
+            border-radius: 40px;
+        }
+
+        .pagedown333 {
+            height: 50px;
+            width: 50px;
+            background-image: url('downBlack.png');
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 23px;
+            border: 2px solid black;
+            margin-left: 20px;
+        }
+
+        .pagedown333:hover {
+            transform: scale(1.3);
+            transition: transform .5s;
+            border: 8px solid rgb(255, 255, 255);
+            border-radius: 40px;
+        }
+
+        .main2page {
+            width: 100%;
+            height: 100vh;
+            background-color: red;
+        }
+
+        .pagedowncon {
+            display: flex;
+        }
+
+        .uphover:hover{
+            transform: scale( 1.3 );
+            transition-duration: 1.2s;
         }
 
 
@@ -344,7 +456,6 @@
             </div>
         </div>
         <div class="containerMain">
-            <!--  -->
             <div class="left">
                 <!-- <div class="disk1"></div> -->
                 <!-- <div class="button1 myButton"><span>끼얏호우</span></div> -->
@@ -352,73 +463,89 @@
                 <!-- <div class="button2 myButton">끼얏호우</div> -->
             </div>
             <div class="center">
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
-                    <h2>Yuhki Kuramoto</h2>
-                    <h1>『  Official Website  』</h1>
-                    <div class="bang">
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <h2>Yuhki Kuramoto</h2>
+                <div class="sun"><h1>『 Official Website 』</h1></div>
+                <div class="bang">
                     <div class="ban">
-                    <div class="disk1"></div>
-                    <br>
-                    <h4> New Album</h4>
-                    <h5>Lake Louise - 2020년 11월</h5>
-                    <br>
-                    <div class="button1 myButton">구매하기</div>
-                     </div>
-                     <div class="ban2">
+                        <div class="disk1"></div>
+                        <br>
+                        <h4> New Album</h4>
+                        <h5>Lake Louise - 2020년 11월</h5>
+                        <div class="button1 myButton">구매하기</div>
+                    </div>
+                    <div class="ban2">
                         <div id="disk2"></div>
                         <br>
                         <h4> New Album</h4>
                         <h5>Lake Louise - 2020년 11월</h5>
-                        <br>
                         <div class="button1 myButton">구매하기</div>
-                     </div>
                     </div>
+                </div>
+                <div class="pageDown">
+                    <div class="pageDownbox"></div>
+                </div>
             </div>
-            <div class="right">
-                <span>dd</span>
-            </div>
+            <div class="right">            </div>
         </div>
         <video muted autoplay loop id="bgvid">
             <source src="mainvideo.mp4" type="video/mp4">
     </div>
-
-    <div id="haha" class="informationContainer bg-img1">
-
+    
+    <div id="haha1" class="informationContainer bg-img1">
+        
         <div class="informationInner">
             <div class="informationTop">
-                <p>텍스트or이미지</p>
+                <div class="infor1">
+                    <img style="height:100px" src="infor1.jpg">
+                </div>
+
             </div>
             <div class="informationMain">
-
-                <!-- article, dl, dt, dd -->
                 <article>
                     <dl>
-                        <dt>2023-03-28</dt>
+                        <dt>2022-12</dt>
+                        <br>
+                        <a href="poster1.jpg">
+                        <img class="uphover" style="width:100px;" src="poster1.jpg"></a>
                     </dl>
                     <dd>
-                        <h3>제목</h3>
-                        <p>내용</p>
+                        <h3>2022 CHRISTMAS CONCERT YUHKI KURAMOTO & FRIENDS</h3>
+                        <p> 24 @ 롯데콘서트홀 (서울)</p>
+                        <p>25 @ 안산문화예술의전당</p>
                     </dd>
 
                 </article>
                 <article>
                     <dl>
-                        <dt>2023-03-28</dt>
+                        <dt>2022-12</dt>
+                        <br>
+                        <a href="poster2.jpg">
+                        <img class="uphover" style="width:100px;" src="poster2.jpg"></a>
+                    </dl>
+                    <dd>
+                        <h3>YUHKI KURAMOTO CONCERT "MEDITATION"</h3>
+                        <p>16 @ 해운대문화회관 해운홀 (부산)</p>
+                        <p>17 @ 김해서부문화센터 (김해)</p>
+                        <p>22 @ 현대예술관 대공연장 (울산)</p>
+                    </dd>
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-8</dt>
+                        <br>
+                        <a href="poster4.jpg">
+                        <img class="uphover" style="width:100px;" src="poster4.jpg"></a>
+                    </dl>
+                    <dd>
+                        <h3>대관령음악제 연중 공연
+                            세상의 모든 피아노 I 유키 구라모토</h3>
+                        <p> 9 @ 알펜시아 콘서트홀</p>
+                    </dd>
+                </article>
+                <article>
+                    <dl>
+                        <dt>2023-03</dt>
                     </dl>
                     <dd>
                         <h3>제목</h3>
@@ -427,7 +554,7 @@
                 </article>
                 <article>
                     <dl>
-                        <dt>2023-03-28</dt>
+                        <dt>2023-03</dt>
                     </dl>
                     <dd>
                         <h3>제목</h3>
@@ -436,33 +563,31 @@
                 </article>
                 <article>
                     <dl>
-                        <dt>2023-03-28</dt>
+                        <dt>2023-03</dt>
                     </dl>
                     <dd>
                         <h3>제목</h3>
                         <p>내용</p>
                     </dd>
                 </article>
-                <article>
-                    <dl>
-                        <dt>2023-03-28</dt>
-                    </dl>
-                    <dd>
-                        <h3>제목</h3>
-                        <p>내용</p>
-                    </dd>
-                </article>
-                <article>
-                    <dl>
-                        <dt>2023-03-28</dt>
-                    </dl>
-                    <dd>
-                        <h3>제목</h3>
-                        <p>내용</p>
-                    </dd>
-                </article>
+
+            </div>
+            <div class="pagedowncon">
+                <div class="pagedown222"></div>
+                <div class="pagedown333"></div>
             </div>
         </div>
+    </div>
+
+    <div class="main2page">
+        <br>
+        <br><br><br><br>
+        <span>트위터&페이스북 피드&유튭 띄움</span>
+        <br>
+        <span>배경에 그림</span>
+        <br>
+        <span>nav bar sns클릭시 main2page로 이동</span>
+
     </div>
 
 
@@ -476,7 +601,7 @@
             $(window).scroll(function () {
 
                 let scrollPosition = $(document).scrollTop();
-                let targetPosition = $("#haha").offset().top;
+                let targetPosition = $("#haha1").offset().top;
                 let navChange = $(".nav1");
                 let navText = $("a");
                 let navHeight = $(".navContainer")
@@ -491,6 +616,43 @@
                     navHeight.removeClass('navContainer-1');
                 }
             });
+
+
+            $(window).scroll(function () {
+
+                let scrollPosition = $(document).scrollTop();
+                let targetPosition = $("#haha1").offset().top;
+                let navChange = $(".pageDownButton");
+
+                if (scrollPosition > targetPosition - 100) {
+                    navChange.addClass('pageDownbox2');
+                    
+                } else {
+                    navChange.removeClass('pageDownbox2');
+                }
+            });
+
+
+
+
+
+            $(document).ready(function () {
+
+                $('.pageDownbox').click(function () {
+                    let offset = $('#haha1').offset();
+                    $('html').animate({ scrollTop: offset.top + 50 }, 400);
+                });
+            });
+
+
+            $(document).ready(function () {
+
+                $('.pagedown222').click(function () {
+                    let offset = $('.container').offset();
+                    $('html').animate({ scrollTop: offset.top}, 400);
+                });
+            });
+
         });
 //
             //         navChange.css({
