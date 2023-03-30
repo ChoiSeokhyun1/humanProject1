@@ -15,7 +15,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Nanum Gothic Coding', monospace;
+            /* font-family: 'Nanum Gothic Coding', monospace; */
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
         /* 메인페이지 상단 */
@@ -30,34 +31,33 @@
             display: flex;
             top: 0;
             left: 0;
-            height: 80px;
+            height: 70px;
             width: 100%;
             z-index: 1;
-            transition: height 1.5s ease;
+            transition: height 0.8s ease;
         }
 
         .navContainer-1 {
-        height: 100px;
-        transition: height 1.5s ease;
+        height: 70px;
+        transition: height 0.8s ease;
         opacity: 0.9;
         }
 
         /* 메인페이지 네비게이션 좌 */
         .nav1 {
             width: 95%;
-            background-color: black;
+            background-color: rgba(5, 3, 15, 0.8);
             z-index: 2;
-            transition:background-color 1.5s ease;
+             transition:background-color 0.8s ease; 
         }
 
         .nav1-1 {
             width: 95%;
             background-color: white;
             z-index: 3;
-            transition:background-color 1.5s ease;
+            transition:background-color 0.8s ease;
         }
 
-        
         ul {
             display: flex;
             justify-content: center;
@@ -72,20 +72,18 @@
 
         a {
             text-decoration: none;
-            color: white;
-            font-size: 1em;
+            color:whitesmoke;
         }
 
         .a2 {
             text-decoration: none;
             color: black; 
-            font-size:1.3em;
         }
 
         /* 메인페이지 네비게이션 우 */
         .nav2 {
             width: 5%;
-            background-color: brown;
+            background-color: rgba(5, 3, 15, 0.95);
             z-index: 2;
             display: flex;
             justify-content: center;
@@ -95,7 +93,9 @@
             flex-direction: column;
             color: white;
             cursor: pointer;
+            
         }
+
 
         /* a태그 마우스 올렸을 시 색상 변경 */
         /* 풀리는데 이유를 모름. 스타일 충돌 상관없이 강제로 하는 명령어!important */
@@ -124,7 +124,7 @@
             /*좌우정렬*/
             align-items: center;
             /*상하정렬*/
-            padding-top: 200px;
+            padding-top: 120px;
         }
 
         .bg-img1 {
@@ -133,7 +133,7 @@
 
         /* 인포메이션 이너 (흰 배경) */
         .informationInner {
-            width: 93%;
+            width: 95%;
             height: 90vh;
             background-color: white;
             display: flex;
@@ -158,16 +158,17 @@
 
         /* 인포메이션 main */
         .informationMain {
-            width: 90%;
-            height: 600px;
+            width: 70%;
+            height: 400px;
             overflow: scroll;
+            margin-bottom:50px;
         }
 
         /* 인포메이션 main에 들어가는 박스 */
         article {
-            width: 75%;
+            width: 85%;
             height: auto;
-            border-top: 7px double black;
+            border-top: 4px double black;
             display: flex;
             margin: 0 auto;
             padding-top: 20px;
@@ -191,13 +192,17 @@
             margin-bottom: 30px;
         }
 
+        h1 {
+            font-size: 3em;
+        }
+
         .containerMain {
             display: flex;
             height: 100vh;
         }
 
         .left {
-            width: 30%;
+            width: 10%;
             height: 100%;
             /* background: rgba(255, 255, 255, 0.01); */
             display: flex;
@@ -207,10 +212,11 @@
             /*상하정렬*/
             color: white;
             flex-direction: column;
+            filter:blur(0.5px);
         }
 
         .center {
-            width: 40%;
+            width: 80%;
             height: 100%;
             /* background-color: blue; */
             display: flex;
@@ -220,10 +226,12 @@
             /*상하정렬*/
             color: white;
             flex-direction: column;
+            filter:blur(0.5px);
+            
         }
 
         .right {
-            width: 30%;
+            width: 10%;
             height: 100%;
             /* background-color: red; */
             display: flex;
@@ -233,39 +241,48 @@
             /*상하정렬*/
             color: white;
             flex-direction: column;
+            
         }
 
         .disk1 {
-            margin-top: 300px;
-            width: 50%;
-            height: 20%;
-            background-image: url('/humanProject/disk1.jpg');
-            background-size: cover;
-            filter: brightness(90%);
-            border-radius: 10px;
-            box-shadow: rgb(20, 19, 19) 0px 35px 30px -30px;
-        }
-
-        #disk2 {
-            width: 50%;
-            height: 20%;
-            background-image: url('/humanProject/disk2.jpg');
-            background-size: cover;
-            filter: brightness(90%);
+            width: 90%;
+            height: 40%;
+            background-image: url('disk1.jpg');
+            background-size:cover;
+            filter: brightness(100%);
             border-radius: 10px;
             box-shadow: rgb(22, 22, 22) 0px 35px 30px -30px;
         }
 
-        .button1 {}
+        #disk2 {
+            width: 90%;
+            height: 40%;
+            background-image: url('disk2.jpg');
+            background-size:cover;
+            filter: brightness(100%);
+            border-radius: 10px;
+            box-shadow: rgb(22, 22, 22) 0px 35px 30px -30px;
+        }
 
-        .button2 {}
+        .button1 {
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+        }
+
+        .button2 {
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+        }
 
         .myButton {
-            margin-top: 15px;
-            width: 50%;
-            height: 4%;
-            margin-bottom: 30px;
-            background: black;
+            width: 70%;
+            height: 7%;
+            background: rgba(0, 0, 0, 0.8);
+            border:2px solid black;
             border-radius: 30px;
             cursor: pointer;
             font-size: 14px;
@@ -278,6 +295,34 @@
             background: rgb(255, 255, 255, 0.5);
             color: black;
         }
+
+        .ban{
+            margin-right:25px;
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+        }
+        .ban2{
+            margin-left:25px;
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+        }
+
+        .bang{
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:center;
+        }
+
+
     </style>
 </head>
 
@@ -286,6 +331,7 @@
         <div class="navContainer">
             <div class="nav1">
                 <ul>
+                    <li><a href="#">Top</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Discography</a></li>
                     <li><a href="#">Sales</a></li>
@@ -293,22 +339,55 @@
                 </ul>
             </div>
             <div class="nav2">
-                <p><img src="sns.jpg"></p>
-                <p style="font-size: 1.2em;">SNS</p>
+                <p><img src="#"></p>
+                <p style="font-size: 0.9em;">SNS</p>
             </div>
         </div>
         <div class="containerMain">
             <!--  -->
             <div class="left">
-                <div class="disk1"></div>
-                <div class="button1 myButton"><br>끼얏호우</div>
-                <div id="disk2"></div>
-                <div class="button2 myButton"><br>끼얏호우</div>
+                <!-- <div class="disk1"></div> -->
+                <!-- <div class="button1 myButton"><span>끼얏호우</span></div> -->
+                <!-- <div id="disk2"></div> -->
+                <!-- <div class="button2 myButton">끼얏호우</div> -->
             </div>
             <div class="center">
-                <span>
-                    <h1>하하하하</h1>
-                </span>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                    <h2>Yuhki Kuramoto</h2>
+                    <h1>『  Official Website  』</h1>
+                    <div class="bang">
+                    <div class="ban">
+                    <div class="disk1"></div>
+                    <br>
+                    <h4> New Album</h4>
+                    <h5>Lake Louise - 2020년 11월</h5>
+                    <br>
+                    <div class="button1 myButton">구매하기</div>
+                     </div>
+                     <div class="ban2">
+                        <div id="disk2"></div>
+                        <br>
+                        <h4> New Album</h4>
+                        <h5>Lake Louise - 2020년 11월</h5>
+                        <br>
+                        <div class="button1 myButton">구매하기</div>
+                     </div>
+                    </div>
             </div>
             <div class="right">
                 <span>dd</span>
