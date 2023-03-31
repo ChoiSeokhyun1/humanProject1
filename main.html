@@ -47,7 +47,7 @@
         /* 메인페이지 네비게이션 좌 */
         .nav1 {
             width: 95%;
-            background-color: rgba(5, 3, 15, 1);
+            /* background-color: rgba(5, 3, 15, 1); */
             z-index: 2;
             transition: background-color 0.8s ease;
         }
@@ -72,9 +72,11 @@
         }
 
         a {
+            font-weight: bold;
+            color: rgb(255, 255, 255);
             text-decoration: none;
-            color: whitesmoke;
         }
+
 
         .a2 {
             text-decoration: none;
@@ -197,7 +199,7 @@
 
         dl {
             width: 20%;
-            display:flex;
+            display: flex;
             justify-content: center;
             /*좌우정렬*/
             align-items: center;
@@ -219,15 +221,11 @@
 
         h1 {
             font-size: 4em;
-            font-family:'Times New Roman', Times, serif;
-            color:white;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-            margin-top:20px;
-            border-bottom:2px solid white;
-        }
-
-        h2 {
-            text-shadow: 20px 0 darkblue, 0 1px red, 1px 0 yellow, 0 -1px black;  
+            margin-top: 20px;
+            border-bottom: 2px solid white;
         }
 
         .containerMain {
@@ -266,7 +264,7 @@
             width: 10%;
             height: 100%;
             /* background-color: red; */
-            display:flex;
+            display: flex;
             justify-content: center;
             color: white;
 
@@ -280,10 +278,10 @@
             background-size: cover;
             filter: brightness(100%);
             border-radius: 10px;
-            border:10px solid black;
+            border: 10px solid black;
             border-top: none;
             border-left: none;
-            
+
         }
 
         #disk2 {
@@ -293,7 +291,7 @@
             background-size: cover;
             filter: brightness(100%);
             border-radius: 10px;
-            border:10px solid black;
+            border: 10px solid black;
             border-top: none;
             border-left: none;
         }
@@ -358,7 +356,7 @@
             width: 100%;
             height: 40%;
             display: flex;
-            justify-content: center;         
+            justify-content: center;
         }
 
         .pageDown {
@@ -380,7 +378,7 @@
             transform: scale(1.3);
             transition: transform .5s;
             border-radius: 40px;
-            border:1px solid black;
+            border: 1px solid black;
         }
 
         .pagedown222 {
@@ -429,12 +427,31 @@
             display: flex;
         }
 
-        .uphover:hover{
-            transform: scale( 1.3 );
+        .uphover:hover {
+            transform: scale(1.3);
             transition-duration: 1.2s;
         }
 
 
+        #load {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            display: block;
+            opacity: 0.8;
+            background: white;
+            z-index: 99;
+            text-align: center;
+        }
+
+        #load>img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 100;
+        }
     </style>
 </head>
 
@@ -444,7 +461,10 @@
             <div class="nav1">
                 <ul>
                     <li><a href="#">Top</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li>
+                        <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                        <a href="profile.html">Profile</a>
+                    </li>
                     <li><a href="#">Discography</a></li>
                     <li><a href="#">Sales</a></li>
                     <li><a href="#">Q & A</a></li>
@@ -464,8 +484,11 @@
             </div>
             <div class="center">
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <h2>Yuhki Kuramoto</h2>
-                <div class="sun"><h1>『 Official Website 』</h1></div>
+                <h2 class="glitch">Yuhki Kuramoto</h2>
+
+                <div class="sun">
+                    <h1>『 Official Website 』</h1>
+                </div>
                 <div class="bang">
                     <div class="ban">
                         <div class="disk1"></div>
@@ -486,14 +509,14 @@
                     <div class="pageDownbox"></div>
                 </div>
             </div>
-            <div class="right">            </div>
+            <div class="right"> </div>
         </div>
         <video muted autoplay loop id="bgvid">
             <source src="mainvideo.mp4" type="video/mp4">
     </div>
-    
+
     <div id="haha1" class="informationContainer bg-img1">
-        
+
         <div class="informationInner">
             <div class="informationTop">
                 <div class="infor1">
@@ -507,7 +530,7 @@
                         <dt>2022-12</dt>
                         <br>
                         <a href="poster1.jpg">
-                        <img class="uphover" style="width:100px;" src="poster1.jpg"></a>
+                            <img class="uphover" style="width:100px;" src="poster1.jpg"></a>
                     </dl>
                     <dd>
                         <h3>2022 CHRISTMAS CONCERT YUHKI KURAMOTO & FRIENDS</h3>
@@ -521,7 +544,7 @@
                         <dt>2022-12</dt>
                         <br>
                         <a href="poster2.jpg">
-                        <img class="uphover" style="width:100px;" src="poster2.jpg"></a>
+                            <img class="uphover" style="width:100px;" src="poster2.jpg"></a>
                     </dl>
                     <dd>
                         <h3>YUHKI KURAMOTO CONCERT "MEDITATION"</h3>
@@ -535,7 +558,7 @@
                         <dt>2023-8</dt>
                         <br>
                         <a href="poster4.jpg">
-                        <img class="uphover" style="width:100px;" src="poster4.jpg"></a>
+                            <img class="uphover" style="width:100px;" src="poster4.jpg"></a>
                     </dl>
                     <dd>
                         <h3>대관령음악제 연중 공연
@@ -590,6 +613,9 @@
 
     </div>
 
+    <div id="load">
+        <img src="loading.gif" alt="loading">
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
@@ -597,6 +623,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function () {
+
+            setTimeout(function () {
+                $('#load').hide();
+            }, 1500);
 
             $(window).scroll(function () {
 
@@ -626,7 +656,7 @@
 
                 if (scrollPosition > targetPosition - 100) {
                     navChange.addClass('pageDownbox2');
-                    
+
                 } else {
                     navChange.removeClass('pageDownbox2');
                 }
@@ -649,7 +679,7 @@
 
                 $('.pagedown222').click(function () {
                     let offset = $('.container').offset();
-                    $('html').animate({ scrollTop: offset.top}, 400);
+                    $('html').animate({ scrollTop: offset.top }, 400);
                 });
             });
 

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* 글자자간 letter-spacing */
+            letter-spacing:2px; 
+        }
+
+        /* 메인페이지 상단 */
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* 메인페이지 네비게이션 */
+        .navContainer {
+            display: flex;
+            justify-content: center; /*좌우정렬*/
+            align-items: center; /*수직정렬*/
+            flex-direction: column; /*위에서 아래로 정렬*/
+            height: 15%;
+            width: 100%;
+        }
+
+        .top {
+            width: 100%;
+            height: 50%;
+            background-color: rgb(255, 255, 255);
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            /*좌우정렬*/
+            align-items: center;
+            flex-direction: column; /*위에서 아래로 정렬*/
+            margin-top:40px;
+            padding-bottom:10px;
+        }
+
+        .headerFont{
+            font-size: 1.25em;
+            font-weight:10;
+        }
+
+        .bottomLine{
+            border-bottom:1px solid black;
+            width: 70%;
+            margin-top:20px;
+        }
+
+        .nav1 {
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            z-index: 2;
+            display: flex;
+            justify-content: center; /*좌우정렬*/
+            align-items: center; /*수직정렬*/
+        }
+
+        ul{
+            display: flex;
+            justify-content: center; /*좌우정렬*/
+            
+        }
+
+        li{
+            margin-left:30px;
+            color:black;
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color:black;
+            font-weight:10;
+        }
+
+        .nav1 a:hover {
+            color: red !important;
+        }
+
+        .mainTop{
+            width: 100%;
+            height: 85%;
+        }
+
+        .mainTopTop{
+            width:100%;
+            height:25%;
+            background-color: red;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainTopCenter{
+            width:100%;
+            height:50%;
+            background-color: white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainTopFoot{
+            width:100%;
+            height:25%;
+            background-color: blue;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navContainer">
+            <div class="top">
+                <p class="headerFont">YUHKI KURAMOTO</p>
+                <div class="bottomLine"></div>
+            </div>
+            <div class="nav1">
+                <ul>
+                    <li><a href="main.html">Top</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#">Discography</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li><a href="#">Q & A</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mainTop">
+            <div class="mainTopTop">
+                <p>하하하하</p>
+            </div>
+
+            <div class="mainTopCenter">
+                <p>하하하하</p>
+            </div>
+
+            <div class="mainTopFoot">
+                <p>하하하하</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
